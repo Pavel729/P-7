@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.12.0-web/css/all.css">
+</head>
+<title>Content </title>
+</head>
+
+<body>
+    <nav id="nav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Pavel</label>
+        <ul>
+            <li><a href="main.html" data-after="Home">Home</a></li>
+            <li><a href="about.html" data-after="About">About</a></li>
+            <li><a class="active" href="content.html" data-after="Content">Content</a></li>
+            <li><a href="contact.html" data-after="Contact">Contact</a></li>
+
+        </ul>
+    </nav>
+    <section id="searchbx">
+        <div class="search">
+            <input type="search" id="search" placeholder="Search Here">
+            <button id="but" type="btn">Search</button>
+        </div>
+    </section>
+    <section id="content">
+        <div class="c-container">
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img1.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>title </h2>
+                    <p>js
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem fugit temporibus
+                        </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img2.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>himel</h2>
+                    <p>hello. A voluptatem fugit temporibus
+                        </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img3.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>pavel</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem fugit temporibus
+                       </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img4.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>css</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem fugit temporibus
+                        </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img5.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>html</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem fugit temporibus
+                        </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img1.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>Card 6</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem fugit temporibus
+                       </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img2.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>Card 7</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem fugit temporibus
+                       </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img3.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>Card 8</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem fugit temporibus
+                       </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgbx">
+                    <img src="img4.jpg" alt="img">
+                </div>
+                <div class="txt">
+                    <h2>Card 9</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatem fugit temporibus
+                        </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        let search = document.getElementById("search")
+        search.addEventListener("input", function () {
+            let inputVal = search.value.toLowerCase();
+
+            console.log("input event done..", inputVal);//3--------
+            let card = document.getElementsByClassName("card");
+            Array.from(card).forEach(function (element) {
+                let txt = element.getElementsByTagName("p") [0] .innerText;
+                let title = element.getElementsByTagName("h2") [0] .innerText;
+                if (txt.includes(inputVal) || title.includes(inputVal)) {
+                    element.style.display = "block";
+                }
+                else {
+                    element.style.display = "none";
+                }
+               
+
+            })
+
+        })
+
+
+        let but = document.getElementById('but');
+        but.addEventListener('click', function () {
+            search.value = "";
+
+        })
+    </script>
+</body>
+
+</html>

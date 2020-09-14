@@ -1,0 +1,334 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:montserrat;
+	list-style:none;
+	text-decoration:none;
+	box-sizing:border-box;
+
+}
+
+body{
+	/* height: 100vh; */
+	background: #333 url('bg.png') no-repeat center center / cover;
+	/* background-blend-mode: darken; */
+	color: aliceblue;
+	/* overflow: hidden; */
+	background-attachment: fixed;
+}
+
+nav{
+	background:transparent;
+	background: linear-gradient(#262626,#000000);
+	height:80px;
+	width:100%;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+nav .logo{
+	color:#ffffff;
+	font-size:35px;
+	line-height:80px;
+	padding:0 90px;
+	font-weight:bold;
+	
+}
+
+nav ul{
+	float:right;
+	margin-right:20px;
+}
+
+nav ul li{
+	display:inline-block;
+	line-height:80px;
+	margin:0 5px;
+}
+
+nav ul li a{
+	color:#fff;
+	font-size:17px;
+	text-transform:uppercase;
+	padding:7px 13px;
+	border-radius:5px;
+	z-index: 9;
+	
+}
+
+a:hover{
+	background:#fff;
+	color:#313038;
+	transition:0.4s;	
+}
+
+a:active{
+	color:#fff;
+	background:linear-gradient(#A00208,#110906);
+	transition: 0.7s;
+	cursor:progress;
+}
+
+a.active{
+	color:#fff;
+	background:linear-gradient(#A00208,#110906);
+	transition: 0.7s;
+}
+
+.checkbtn{
+	font-size:30px;
+	color:#fff;
+	float:right;
+	line-height:80pz;
+	margin-right:40px;
+	margin-top:25px;
+	cursor:pointer;
+	display:none;
+}
+
+#check{
+	display:none;
+}
+
+
+/* for home */
+
+.container{
+	display: flex;
+	margin-top:10%;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+	height: 100%;
+	padding: 0 3rem;
+}
+
+.container h1,h2{
+	font-weight: 200;
+	margin: 0.4rem;
+}
+
+.container h1{
+	font-size: 4.5rem;
+}
+
+.container h2{
+	font-size: 2rem;
+	color: #aaaaaa;
+}
+
+.txt{
+	color: #09ff00;
+}
+
+@media(min-width:1025){
+	nav .logo{
+		font-size:27px;
+		padding-left:50px;
+	}
+	
+	nav ul li a{
+		font-size:15px;
+		
+	}
+	.container h1{
+		font-size: 5rem;
+	}
+}
+/*
+@media(max-width:1000){
+	.container h1{
+		font-size: 3rem;
+	}
+} */
+
+
+/* for nav */
+
+
+@media (max-width: 1025px){
+	nav .logo{
+		font-size:24px;
+		padding-left:50px;
+	}
+	
+	nav ul li a{
+		font-size:10px;
+		
+	}
+
+	
+	.container h1{
+		font-size: 3rem;
+	}
+
+	.container{
+		padding: 0 1rem;
+	}
+}
+
+
+@media (max-width:858px){
+	.checkbtn{
+		display:block;
+	}
+	body{
+		background-size: cover;
+		background-position: center;
+	}
+
+	.container h1{
+		font-size: 3rem;
+	}
+
+	.container{
+		padding: 0 1rem;
+	}
+
+	ul{
+		position:fixed;
+		width:100%;
+		height:100vh;
+		background:#313038;
+		top:80px;
+		left:-100%;
+		text-align:center;
+		transition:all 0.5s;
+	}
+	nav ul li{
+		display:block;
+		
+	}
+	nav ul li a{
+		font-size:20px;
+	}
+	
+	a:hover{
+		color:#000000;
+		
+	}
+	
+	a:active{
+		color:#fff;
+		background:#080808;
+		transition: 0.7s;
+	}
+	
+	#check:checked ~ ul{
+		left:0;
+	}
+	
+	
+	
+}
+
+@media(max-width:500px){
+	.checkbtn{
+		display:block;
+	}
+	body{
+		background-size: cover;
+		background-position: center;
+	}
+
+	.container h1{
+		font-size: 2.5rem;
+	}
+
+	.container h2{
+		font-size: 1.5rem;
+	}
+
+	.container{
+		padding: 0 1rem;
+	}
+
+	ul{
+		position:fixed;
+		width:100%;
+		height:100vh;
+		background:#313038;
+		top:80px;
+		left:-100%;
+		text-align:center;
+		transition:all 0.5s;
+	}
+	nav ul li{
+		display:block;
+		
+	}
+	nav ul li a{
+		font-size:20px;
+	}
+	
+	a:hover{
+		color:#000000;
+		
+	}
+	
+	a:active{
+		color:#fff;
+		background:#080808;
+		transition: 0.7s;
+	}
+	
+	#check:checked ~ ul{
+		left:0;
+	}
+}
+
+@media(max-width:340px){
+	.checkbtn{
+		display:block;
+	}
+	body{
+		background-size: cover;
+		background-position: center;
+	}
+
+	.container h1{
+		font-size: 2rem;
+	}
+
+	.container h2{
+		font-size: 1rem;
+	}
+
+	.container{
+		padding: 0 1rem;
+	}
+
+	ul{
+		position:fixed;
+		width:100%;
+		height:100vh;
+		background:#313038;
+		top:80px;
+		left:-100%;
+		text-align:center;
+		transition:all 0.5s;
+	}
+	nav ul li{
+		display:block;
+		
+	}
+	nav ul li a{
+		font-size:20px;
+	}
+	
+	a:hover{
+		color:#000000;
+		
+	}
+	
+	a:active{
+		color:#fff;
+		background:#080808;
+		transition: 0.7s;
+	}
+	
+	#check:checked ~ ul{
+		left:0;
+	}
+}

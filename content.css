@@ -1,0 +1,133 @@
+
+
+
+
+/* search box */
+
+#searchbx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 11;
+    top: 24px;
+}
+
+.search input{
+    padding: 7px 14px;
+    border-radius: 10px;
+    width: 270px;
+    background: rgba(0,0,0,0.5);
+    color: #ffffff;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.search button{
+    padding: 7px 14px ;
+    background:linear-gradient(#A00208,#110906);
+    color:aliceblue;
+    border-radius: 10px;
+    border:1px solid #110906;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background: aliceblue;
+    color: #111;
+}
+
+@media (max-width:630px){
+    #search{
+        top: 24px;
+    }
+    .search input{
+        width:100px;
+    }
+}
+
+
+/* Content section */
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+
+}
+
+.c-container{
+    margin-top:30px ;
+    position: relative;
+    width:1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.c-container .card{
+    max-width:300px;
+    height:180px;
+    border-radius: 10px;
+    position: relative;
+    background: #262626;
+    margin:30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+    transition: 0.5s;
+}
+
+.c-container .card:hover{
+    height:360px;
+}
+
+.c-container .card:hover .imgbx{
+    box-shadow: none;
+}
+
+.c-container .card .imgbx{
+    position: relative;
+    height: 250px;
+    width:260px;
+    top: -60px;
+    left: 0px;
+    z-index: 1;
+    border-radius:10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+}
+
+.c-container .card .imgbx img{
+    max-width:100%;
+    border-radius:10px;
+}
+
+.c-container .card .txt{
+    position: relative;
+    margin-top: -148px;
+    padding: 10px 15px;
+    text-align: center;
+    color: aliceblue;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.c-container .card:hover .txt{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -100px;
+    padding-bottom: 10px;
+    transition-delay:0.3s ;
+}
+
+
+
+
+
+
+
